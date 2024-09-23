@@ -16,13 +16,15 @@ const DashboardHeader: React.FC<{
 
   const { data: profile } = useGetprofileQuery();
 
+  console.log({ profile });
+
   return (
     <header className="bg-white  p-5 shadow-md">
       <nav className="flex items-center justify-between">
         <h1 className="text-xl font-semibold">
           Welcome{" "}
           <span className="text-primary-default">
-            {profile?.data?.firstName}
+            {profile?.data === null ? "Admin" : profile?.data?.firstName}
           </span>
         </h1>
         <ul className="flex text-xl items-center gap-5">
