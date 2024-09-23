@@ -16,8 +16,6 @@ const DashboardHeader: React.FC<{
 
   const { data: profile } = useGetprofileQuery();
 
-  console.log({ profile });
-
   return (
     <header className="bg-white  p-5 shadow-md">
       <nav className="flex items-center justify-between">
